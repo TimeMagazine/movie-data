@@ -1,15 +1,17 @@
 var fs = require("fs"),
 	imdb = require("./lib/imdb.js");
 
-var argv = require('minimist')(process.argv.slice(2));
+if (require.main === module) {
+	var argv = require('minimist')(process.argv.slice(2));
+	if (argv._.length) {
+		command = argv._[0].toLowerCase();
 
-if (argv._.length) {
-	command = argv._[0].toLowerCase();
-
-	if (imdb.hasOwnProperty(command)) {
-		imdb[command](argv, function(response) {
-			console.log(response);
-		});
+		if (imdb.hasOwnProperty(command)) {
+			imdb[command](argv, function(response) {
+				console.log(response);
+			});
+		}
 	}
+} else {
+	module.exports = imdb;
 }
-
