@@ -22,6 +22,8 @@ This module uses [downcache](https://www.npmjs.com/package/downcache) to store a
 	# actor by IDMB id
 	node index.js actor --id=nm0001640 > richard_pryor.json
 
+In the first two cases, the script uses the [undocumented IMDB search API](http://stackoverflow.com/a/7744369/1779735) to resolve the input to a page. It's anecdotally very accurate, but be careful if you're running a large number of names through it to check them afterward.
+
 ##API Usage
 
 	var imdb = require("movie-data");
