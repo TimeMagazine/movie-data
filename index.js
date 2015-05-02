@@ -1,6 +1,7 @@
 var fs = require("fs"),
 	imdb = require("./lib/imdb.js");
 
+// match command-line arguments to imdb libraries
 if (require.main === module) {
 	var argv = require('minimist')(process.argv.slice(2));
 	if (argv._.length) {
