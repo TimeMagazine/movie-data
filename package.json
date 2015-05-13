@@ -20,8 +20,6 @@
     "downcache": "0.0.6-a",
     "ent": "^2.2.0",
     "minimist": "^1.1.0",
-    "mkdirp": "^0.5.0",
-    "mongodb": "^1.4.29",
-    "npmlog": "^1.0.0"
+    "mkdirp": "^0.5.0"
   }
 }
