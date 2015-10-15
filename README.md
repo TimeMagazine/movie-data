@@ -4,11 +4,11 @@ This is a simple scraper that converts the relevant parts of an actor or movie p
 
 This module uses [downcache](https://www.npmjs.com/package/downcache) to store a local copy of each requested page on your local machine. 
 
-##Installation
+## Installation
 
 	npm install
 
-##Command Line Usage
+## Command Line Usage
 
 	# movie by vernacular name
 	node index.js movie --name="The Godfather" > thegodfather.json
@@ -24,7 +24,7 @@ This module uses [downcache](https://www.npmjs.com/package/downcache) to store a
 
 In the first two cases, the script uses the [undocumented IMDB search API](http://stackoverflow.com/a/7744369/1779735) to resolve the input to a page. It's anecdotally very accurate, but be careful if you're running a large number of names through it to check them afterward.
 
-##API Usage
+## API Usage
 
 	var imdb = require("movie-data");
 
@@ -34,7 +34,7 @@ In the first two cases, the script uses the [undocumented IMDB search API](http:
 
 	// other methods are "actor", "movie", "movie_by_id"
 
-###Downcache usage
+### Downcache usage
 
 By default, downcache creates a local directory named "cache" for storing the HTML pages you request. You can adjust downcache's settings from the parent script if you so desire:
 
